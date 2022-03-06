@@ -1,0 +1,14 @@
+header {
+  align-items: center;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
