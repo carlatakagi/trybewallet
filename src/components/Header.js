@@ -17,6 +17,7 @@ class Header extends Component {
   }
 }
 
+// le o estado
 const mapStateToProps = (state) => ({
   user: state.user.email,
 });
