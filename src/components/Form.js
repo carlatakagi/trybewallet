@@ -109,7 +109,7 @@ class Form extends Component {
               name="currency"
             >
               {
-                currencies.map((coin) => (
+                currencies.filter((coin) => coin !== 'USDT').map((coin) => (
                   <option
                     key={ coin }
                     data-testid={ coin }
