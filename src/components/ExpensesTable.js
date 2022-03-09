@@ -33,12 +33,7 @@ class ExpensesTable extends Component {
                   .replace('/Real Brasileiro', '')
               }
             </td>
-            <td>
-              {
-                (expense.exchangeRates[expense.currency].name)
-                  .replace('/Real Brasileiro', '')
-              }
-            </td>
+            <td>{expense.currency}</td>
             <td>
               {
                 (expense.exchangeRates[expense.currency].ask * expense.value).toFixed(2)
@@ -47,19 +42,19 @@ class ExpensesTable extends Component {
             <td>Real</td>
             <td>
               <button
+                className="edit-btn"
+                type="submit"
+                data-testid="edit-btn"
+              >
+                Editar despesa
+              </button>
+              <button
                 className="delete-btn"
                 type="submit"
                 data-testid="delete-btn"
               >
                 Excluir
 
-              </button>
-              <button
-                className="edit-btn"
-                type="submit"
-                data-testid="edit-btn"
-              >
-                Editar despesa
               </button>
             </td>
           </tr>
