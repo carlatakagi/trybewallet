@@ -29,8 +29,12 @@ class ExpensesTable extends Component {
             <td>{expense.value}</td>
             <td>
               {
-                (expense.exchangeRates[expense.currency].name)
-                  .replace('/Real Brasileiro', '')
+                (expense.exchangeRates[expense.currency].name
+                  === 'Dólar Americano/Real Brasileiro'
+                  ? (expense.exchangeRates[expense.currency].name)
+                    .replace('Dólar Americano/Real Brasileiro', 'Dólar Comercial')
+                  : (expense.exchangeRates[expense.currency].name)
+                    .replace('/Real Brasileiro', ''))
               }
             </td>
             <td>{expense.currency}</td>
