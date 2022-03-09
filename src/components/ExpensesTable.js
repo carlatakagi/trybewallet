@@ -9,59 +9,64 @@ class ExpensesTable extends Component {
 
     return (
       <table>
-        <tr>
-          <th>Descrição</th>
-          <th>Tag</th>
-          <th>Método de pagamento</th>
-          <th>Valor</th>
-          <th>Moeda</th>
-          <th>Câmbio utilizado</th>
-          <th>Valor convertido</th>
-          <th>Moeda de conversão</th>
-          <th>Editar/Excluir</th>
-        </tr>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Tag</th>
+            <th>Método de pagamento</th>
+            <th>Valor</th>
+            <th>Moeda</th>
+            <th>Câmbio utilizado</th>
+            <th>Valor convertido</th>
+            <th>Moeda de conversão</th>
+            <th>Editar/Excluir</th>
+          </tr>
+        </thead>
 
         {expenses.map((expense) => (
-          <tr key={ expense.id }>
-            <td>{expense.description}</td>
-            <td>{expense.tag}</td>
-            <td>{expense.method}</td>
-            <td>{expense.value}</td>
-            <td>
-              {
-                (expense.exchangeRates[expense.currency].name
+          <tbody key={ expense.id }>
+            <tr>
+              <td>{expense.description}</td>
+              <td>{expense.tag}</td>
+              <td>{expense.method}</td>
+              <td>{Number(expense.value).toFixed(2)}</td>
+              <td>
+                {
+                  (expense.exchangeRates[expense.currency].name
                   === 'Dólar Americano/Real Brasileiro'
-                  ? (expense.exchangeRates[expense.currency].name)
-                    .replace('Dólar Americano/Real Brasileiro', 'Dólar Comercial')
-                  : (expense.exchangeRates[expense.currency].name)
-                    .replace('/Real Brasileiro', ''))
-              }
-            </td>
-            <td>{expense.currency}</td>
-            <td>
-              {
-                (expense.exchangeRates[expense.currency].ask * expense.value).toFixed(2)
-              }
-            </td>
-            <td>Real</td>
-            <td>
-              <button
-                className="edit-btn"
-                type="submit"
-                data-testid="edit-btn"
-              >
-                Editar despesa
-              </button>
-              <button
-                className="delete-btn"
-                type="submit"
-                data-testid="delete-btn"
-              >
-                Excluir
+                    ? (expense.exchangeRates[expense.currency].name)
+                      .replace('Dólar Americano/Real Brasileiro', 'Dólar Comercial')
+                    : (expense.exchangeRates[expense.currency].name)
+                      .replace('/Real Brasileiro', ''))
+                }
+              </td>
+              <td>{Number(expense.exchangeRates[expense.currency].ask).toFixed(2)}</td>
+              <td>
+                {
+                  Number(expense.exchangeRates[expense.currency].ask * expense.value)
+                    .toFixed(2)
+                }
+              </td>
+              <td>Real</td>
+              <td>
+                <button
+                  className="edit-btn"
+                  type="submit"
+                  data-testid="edit-btn"
+                >
+                  Editar despesa
+                </button>
+                <button
+                  className="delete-btn"
+                  type="submit"
+                  data-testid="delete-btn"
+                >
+                  Excluir
 
-              </button>
-            </td>
-          </tr>
+                </button>
+              </td>
+            </tr>
+          </tbody>
         ))}
       </table>
     );
