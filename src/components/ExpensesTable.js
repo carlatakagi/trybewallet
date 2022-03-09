@@ -9,64 +9,60 @@ class ExpensesTable extends Component {
 
     return (
       <table>
-        <thead>
-          <tr>
-            <th>Descrição</th>
-            <th>Tag</th>
-            <th>Método de pagamento</th>
-            <th>Valor</th>
-            <th>Moeda</th>
-            <th>Câmbio utilizado</th>
-            <th>Valor convertido</th>
-            <th>Moeda de conversão</th>
-            <th>Editar/Excluir</th>
-          </tr>
-        </thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Tag</th>
+          <th>Método de pagamento</th>
+          <th>Valor</th>
+          <th>Moeda</th>
+          <th>Câmbio utilizado</th>
+          <th>Valor convertido</th>
+          <th>Moeda de conversão</th>
+          <th>Editar/Excluir</th>
+        </tr>
 
         {expenses.map((expense) => (
-          <tbody key={ expense.id }>
-            <tr>
-              <td>{expense.description}</td>
-              <td>{expense.tag}</td>
-              <td>{expense.method}</td>
-              <td>{expense.value}</td>
-              <td>
-                {
-                  (expense.exchangeRates[expense.currency].name)
-                    .replace('/Real Brasileiro', '')
-                }
-              </td>
-              <td>
-                {
-                  (expense.exchangeRates[expense.currency].name)
-                    .replace('/Real Brasileiro', '')
-                }
-              </td>
-              <td>
-                {
-                  (expense.exchangeRates[expense.currency].ask * expense.value).toFixed(2)
-                }
-              </td>
-              <td>Real</td>
-              <td>
-                <button
-                  className="delete-btn"
-                  type="submit"
-                  data-testid="delete-btn"
-                >
-                  Excluir
+          <tr key={ expense.id }>
+            <td>{expense.description}</td>
+            <td>{expense.tag}</td>
+            <td>{expense.method}</td>
+            <td>{expense.value}</td>
+            <td>
+              {
+                (expense.exchangeRates[expense.currency].name)
+                  .replace('/Real Brasileiro', '')
+              }
+            </td>
+            <td>
+              {
+                (expense.exchangeRates[expense.currency].name)
+                  .replace('/Real Brasileiro', '')
+              }
+            </td>
+            <td>
+              {
+                (expense.exchangeRates[expense.currency].ask * expense.value).toFixed(2)
+              }
+            </td>
+            <td>Real</td>
+            <td>
+              <button
+                className="delete-btn"
+                type="submit"
+                data-testid="delete-btn"
+              >
+                Excluir
 
-                </button>
-                <button
-                  className="edit-btn"
-                  type="submit"
-                  data-testid="edit-btn"
-                >
-                  Editar despesa
-                </button>
-              </td>
-            </tr>
-          </tbody>
+              </button>
+              <button
+                className="edit-btn"
+                type="submit"
+                data-testid="edit-btn"
+              >
+                Editar despesa
+              </button>
+            </td>
+          </tr>
         ))}
       </table>
     );
