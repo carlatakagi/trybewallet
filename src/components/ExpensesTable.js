@@ -48,7 +48,23 @@ class ExpensesTable extends Component {
                 }
               </td>
               <td>Real</td>
-              <td>botão editar e excluir</td>
+              <td>
+                <button
+                  className="delete-btn"
+                  type="submit"
+                  data-testid="delete-btn"
+                >
+                  Excluir
+
+                </button>
+                <button
+                  className="edit-btn"
+                  type="submit"
+                  data-testid="edit-btn"
+                >
+                  Editar despesa
+                </button>
+              </td>
             </tr>
           </tbody>
         ))}
