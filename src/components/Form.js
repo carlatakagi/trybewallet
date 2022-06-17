@@ -42,7 +42,6 @@ class Form extends Component {
     });
   }
 
-  // linhas 46 a 70 tive ajuda da minha irmã
   async handleClick(event) {
     event.preventDefault();
     const currenciesAPI = await getCoins();
