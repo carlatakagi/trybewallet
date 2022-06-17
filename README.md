@@ -41,7 +41,6 @@ Tabela de conteúdos
 - [x] Conectar Redux aos componentes React
 
 - [x] Criar actions assíncronas na sua aplicação React que faz uso de Redux.
-
 ---
 
 ## 🛠 Tecnologias
