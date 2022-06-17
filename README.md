@@ -1,5 +1,5 @@
 <h1 align="center">
-     🪐<a href="#" alt="blog"> Solar System </a>🪐
+     💲<a href="#" alt="blog"> Trybewallet </a>💲
 </h1>
 <h2 align="center">
 	🚀 Concluído 🚀
@@ -24,7 +24,7 @@ Tabela de conteúdos
 
 ## 💻 Sobre o projeto
 
-   Aplicação desenvolvida em React que mostra os planetas do Sistema Solar, projeto realizado durante o curso de Desenvolvimento Web da [Trybe](https://www.betrybe.com/).
+   Aplicação desenvolvida em React Redux que simula uma carteira de controle de gastos, projeto realizado durante o curso de Desenvolvimento Web da [Trybe](https://www.betrybe.com/).
 
 ---
 
@@ -52,6 +52,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)**
 -   **[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)**
 -   **[React](https://pt-br.reactjs.org/)**
+-   **[Redux](https://redux.js.org/)**
 
 ---
 ## 🚀 Como executar o projeto
@@ -76,7 +77,7 @@ $ npm start
 
 ## 🎨 Layout
 
-Conheça a aplicação:
+<!-- Conheça a aplicação:
 
 <a href="">
   <img alt="Página que mostra os planetas do Sistema Solar" src="./solarsystem.gif">
@@ -94,7 +95,7 @@ Conheça a aplicação:
 
   </a>
  
-</p>
+</p> -->
 
 
 ---
@@ -106,6 +107,6 @@ Conheça a aplicação:
  <br />
 
 
-[![Gmail Badge](https://img.shields.io/badge/-carlatakagi@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:carlatakagi@gmail.com)](mailto:carlatakagi@gmail.com)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/carla-takagi/)
+[![Gmail Badge](https://img.shields.io/badge/-carlatakagi@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:carlatakagi@gmail.com)](mailto:carlatakagi@gmail.com)
 ---
