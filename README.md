@@ -2,7 +2,7 @@
      💲<a href="#" alt="blog"> Trybewallet </a>💲
 </h1>
 <h2 align="center">
-	⛔CSS em contrução⛔
+	⛔CSS em construção⛔
 </h2>
 
 <br>
