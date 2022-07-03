@@ -1,13 +1,18 @@
 h1 {
   text-align: center;
+  color: white;
+}
+
+body {
+  background: rgb(254, 123, 0);
 }
 
 .login {
-  align-items: center;
-  background: rgb(252, 251, 253, 0.589);
-  border: rgb(243, 7, 7) 3px solid;
+  background: rgba(42, 44, 43, 0.576);
+  border: rgb(250, 250, 250) 3px solid;
+  border-radius: 3px;
   display: block;
-  height: 10vw;
+  height: 25vw;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -15,4 +20,17 @@ h1 {
   padding: 30px;
   text-align: center;
   width: 20%;
+}
+
+.form-login {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 125px;
+  margin-bottom: 20px;
+}
+
+.btn-login {
+  background: rgb(248, 248, 248);
+  color: rgb(0, 0, 0);
 }

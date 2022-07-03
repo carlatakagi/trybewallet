@@ -26,7 +26,6 @@ class Login extends React.Component {
     this.validateEmailAndPassword());
   }
 
-  // como validar email: https://www.horadecodar.com.br/2020/09/13/como-validar-email-com-javascript/
   validateEmailAndPassword() {
     const { email, password } = this.state;
     const regexEmail = /\S+@\S+\.\S+/;
@@ -61,29 +60,32 @@ class Login extends React.Component {
         <h1>Login</h1>
 
         <form className="login">
-          <label htmlFor="email-input">
-            <input
-              data-testid="email-input"
-              type="email"
-              placeholder="Email"
-              onChange={ this.handleChange }
-              value={ email }
-              name="email"
-            />
-          </label>
+          <div className="form-login">
+            <label htmlFor="email-input">
+              <input
+                data-testid="email-input"
+                type="email"
+                placeholder="Email"
+                onChange={ this.handleChange }
+                value={ email }
+                name="email"
+              />
+            </label>
 
-          <label htmlFor="password-input">
-            <input
-              data-testid="password-input"
-              type="password"
-              placeholder="Senha"
-              value={ password }
-              name="password"
-              onChange={ this.handleChange }
-            />
-          </label>
+            <label htmlFor="password-input">
+              <input
+                data-testid="password-input"
+                type="password"
+                placeholder="Senha"
+                value={ password }
+                name="password"
+                onChange={ this.handleChange }
+              />
+            </label>
+          </div>
 
           <button
+            className="btn-login"
             type="submit"
             disabled={ isDisabled }
             onClick={ (event) => {
