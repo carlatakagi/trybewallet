@@ -56,16 +56,16 @@ class Login extends React.Component {
     const { history, dispatch } = this.props;
 
     return (
-      <div>
-        <h1>Login</h1>
-
-        <form className="login">
+      <div className="login">
+        <form className="login-form">
+          <h1 className="login-title">TrybeWallet</h1>
           <div className="form-login">
             <label htmlFor="email-input">
+              <p>Login</p>
               <input
                 data-testid="email-input"
                 type="email"
-                placeholder="Email"
+                placeholder="Digite o seu e-mail"
                 onChange={ this.handleChange }
                 value={ email }
                 name="email"
@@ -73,29 +73,30 @@ class Login extends React.Component {
             </label>
 
             <label htmlFor="password-input">
+              <p>Senha</p>
               <input
                 data-testid="password-input"
                 type="password"
-                placeholder="Senha"
+                placeholder="Digite a sua senha"
                 value={ password }
                 name="password"
                 onChange={ this.handleChange }
               />
             </label>
+            <button
+              className="btn-login"
+              type="submit"
+              disabled={ isDisabled }
+              onClick={ (event) => {
+                event.preventDefault();
+                dispatch(saveLoginInfo(email));
+                history.push('/carteira');
+              } }
+            >
+              Entrar
+            </button>
           </div>
 
-          <button
-            className="btn-login"
-            type="submit"
-            disabled={ isDisabled }
-            onClick={ (event) => {
-              event.preventDefault();
-              dispatch(saveLoginInfo(email));
-              history.push('/carteira');
-            } }
-          >
-            Entrar
-          </button>
         </form>
       </div>
     );
